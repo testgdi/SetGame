@@ -33,9 +33,7 @@ class SetDeck:
 
     def pop(self):
         if len(self.decklist) >0:
-            c = self.decklist[0]
-            self.decklist = self.decklist[1:]
-            return c
+            return self.decklist.pop()
         else:
             return None
 
