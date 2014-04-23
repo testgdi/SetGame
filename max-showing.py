@@ -1,8 +1,7 @@
 from SetCard import *
 """
 Monte Carlo simulation of many games.
-play the game until deck is used up and no
-more sets are to be found in the showing cards.
+play the game until deck is used up
 Keep track of the max number of cards that
 were ever showing at one time, i.e. immediately after
 the start 12 cards are showing.
