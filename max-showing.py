@@ -29,7 +29,7 @@ def maxShowing():
 
         # add 3 cards to showing
         for i in range(3):
-            g.showing.append( g.deck.pop())
+            g.showing.append( g.deck.deal_card())
 
         # update maxshowing and again see if there are any sets showing
         maxshowing = max( maxshowing, len(g.showing))

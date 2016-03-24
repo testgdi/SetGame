@@ -15,7 +15,7 @@ class SetCard:
 class SetDeck:
     """ a deck of Set Game cards, all 81 of them
         stored in the property self.decklist
-        some member functions to deal a card (pop)
+        some member functions to deal a card
         and shuffle the deck"""
         
     def __init__(self):
@@ -31,7 +31,7 @@ class SetDeck:
             print c.str()
 
 
-    def pop(self):
+    def deal_card(self):
         if len(self.decklist) >0:
             return self.decklist.pop()
         else:
@@ -79,7 +79,7 @@ class SetGame:
     def initial_12(self):
         self.showing = []
         for i in range(12):
-            self.showing.append( self.deck.pop())
+            self.showing.append( self.deck.deal_card())
 
 
     def showingHaveSet(self):

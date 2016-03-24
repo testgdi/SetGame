@@ -37,7 +37,7 @@ def leftOver():
 
         # add 3 cards to showing
         for i in range(3):
-            g.showing.append( g.deck.pop())
+            g.showing.append( g.deck.deal_card())
 
     # deck is empty, now remove any remaining sets from g.showing
     s = g.showingHaveSet()
