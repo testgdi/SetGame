@@ -1,5 +1,5 @@
 import unittest
-from SetCard import SetCard, SetDeck
+from SetCard import SetCard, SetDeck, SetGame
 
 class TestCardMethods( unittest.TestCase):
 
@@ -38,12 +38,24 @@ class TestDeckMethods( unittest.TestCase):
         self.d.deal_card()
         self.assertEqual( len( self.d.decklist), 80)
 
-    def test_showing_cards(self):
+class TestGameMethods( unittest.TestCase):
+
+    def setUp(self):
+        self.g = SetGame()
+
+    def test_showing_after_dealing(self):
         """
-        check that for a new deck, after dealing 1 card, showing has 1
+        check that for a new game, after dealing initial showing, showing has 12
         """
-        self.d.deal_card()
-        self.assertEqual( len( self.d.decklist), 80)
+        self.g.initial_12()
+        self.assertEqual( len( self.g.showing), 12)
+
+    def test_deck_after_dealing(self):
+        """
+        check that for a new game, after dealing initial 12, deck 81-12=69
+        """
+        self.g.initial_12()
+        self.assertEqual( len( self.g.deck.decklist), 69)
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(verbosity=2)
