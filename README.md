@@ -8,3 +8,5 @@ use-deck.py is a montecarlo simulation to find the probability of
 there being no cards left showing at the end of a game. So it
 simulates dealing the initial 12, removing sets and replacing cards
 from the deck as needed.
+
+to run tests: python set_unittest.py -v
